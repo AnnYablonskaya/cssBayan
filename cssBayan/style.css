@@ -1,0 +1,16 @@
+*{
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    background-color: rgb(148, 229, 229);
+    font-size: 1rem;
+    color: rgb(70, 46, 122);
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 30px;
+}
