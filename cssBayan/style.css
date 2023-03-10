@@ -1,11 +1,23 @@
+@font-face {
+    font-family: 'PT Sans Narrow';
+    src: url(./fonts/PTSansNarrow-Regular.ttf) format('ttf');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'PT Sans Narrow';
+    src: url(./fonts/PTSansNarrow-Bold.ttf) format('ttf');
+    font-weight: 700;
+}
 *{
     box-sizing: border-box;
 }
 html {
     scroll-behavior: smooth;
     background-color: rgb(148, 229, 229);
-    font-size: 1rem;
+    font-size: 10px;
     color: rgb(70, 46, 122);
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: 400;
 }
 .wrapper {
     display: flex;
@@ -13,4 +25,37 @@ html {
     max-width: 50%;
     margin: 0 auto;
     padding: 30px;
+}
+.title{
+    font-size: 4rem;
+}
+.bayan{
+    cursor: pointer;
+}
+.bayan__line{
+    height: 1px;
+    width: 100%;
+    background-color: black;
+}
+.item__btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.item__title{
+    font-size: 2rem;
+}
+.item__icon{
+    background: url(./assets/eye_closed_thin_icon_171797.svg) center/cover no-repeat;
+    width: 3rem;
+    height: 3rem;
+}
+.item__icon:hover{
+    background: url(./assets/search_view_show_eye_vision_watch_look_icon_232675.svg) center/cover no-repeat;
+    width: 3rem;
+    height: 3rem;
+}
+.item__img{
+    height: 40%;
+    width: 40%;
 }
