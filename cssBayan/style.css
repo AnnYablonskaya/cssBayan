@@ -14,7 +14,7 @@
 html {
     scroll-behavior: smooth;
     background-color: rgb(148, 229, 229);
-    font-size: 10px;
+    font-size: 5px;
     color: rgb(70, 46, 122);
     font-family: 'PT Sans Narrow', sans-serif;
     font-weight: 400;
@@ -22,7 +22,7 @@ html {
 .wrapper {
     display: flex;
     flex-direction: column;
-    max-width: 50%;
+    max-width: 70vw;
     margin: 0 auto;
     padding: 30px;
 }
@@ -37,10 +37,17 @@ html {
     width: 100%;
     background-color: black;
 }
+.item__input {
+    display: none;
+}
+.bayan__item:hover .item__btn .item__title {
+    color: rgb(224, 13, 217);
+}
 .item__btn{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem;
 }
 .item__title{
     font-size: 2rem;
@@ -49,13 +56,88 @@ html {
     background: url(./assets/eye_closed_thin_icon_171797.svg) center/cover no-repeat;
     width: 3rem;
     height: 3rem;
+    opacity: 0;
 }
 .item__icon:hover{
     background: url(./assets/search_view_show_eye_vision_watch_look_icon_232675.svg) center/cover no-repeat;
     width: 3rem;
     height: 3rem;
+    opacity: 1;
 }
 .item__img{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.image{
+    opacity: 0;
+    transition: 1s;
+    height: 0;
+    width: 0;
+}
+.item__input:checked ~ .item__img > .image{
+    text-align: center;
+    opacity: 1;
     height: 40%;
     width: 40%;
+    padding: 10px 0;
+    transition: all 0.5s ease;
+}
+.item__input:hover ~ .item__img > .image{
+    text-align: center;
+    opacity: 1;
+    height: 40%;
+    width: 40%;
+    padding: 10px 0;
+    transition: all 0.5s ease;
+}
+.item__input:hover ~ .item__btn > .item__icon {
+    background: url(./assets/search_view_show_eye_vision_watch_look_icon_232675.svg) center/cover no-repeat;
+    width: 3rem;
+    height: 3rem;
+    opacity: 1;
+}
+.item__input:checked ~ .item__btn > .item__icon {
+    opacity: 1;
+    background: url(./assets/search_view_show_eye_vision_watch_look_icon_232675.svg) center/cover no-repeat;
+}
+.bayan__item:hover > .item__btn > .item__title {
+    color: rgb(224, 13, 217);
+}
+.wrapper:hover > .bayan__item > .item__btn > .item__icon {
+    opacity: 1;
+}
+@media (min-width: 320px) {
+    html {
+        font-size: 7px;
+    }
+    .wrapper {
+        max-width: 80vw;
+    }
+}
+@media (min-width: 820px) {
+    html {
+        font-size: 10px;
+    }
+    .wrapper {
+        max-width: 75vw;
+    }
+}
+
+@media (min-width: 1200px) {
+    html {
+        font-size: 12px;
+    }
+    .wrapper {
+        max-width: 70vw;
+    }
+
+    .mem-item:hover > .mem-title-img > .mem-img,
+    .mem-input:checked ~ .mem-title-img > .mem-img {
+        width: 70%;
+        height: 70%;
+    }
+    .wrapper:hover > .bayan__item > .item__btn > .item__icon {
+        opacity: 1;
+    }
 }
