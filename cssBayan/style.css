@@ -100,7 +100,7 @@ html {
     opacity: 1;
 }
 .wrapper:hover .item__title {
-    color: rgb(108, 6, 104);
+    color: rgb(176, 17, 170);
 }
 @media (min-width: 320px) {
     html {
@@ -131,6 +131,6 @@ html {
         font-size: 10px;
     }
     .wrapper {
-        max-width: 65vw;
+        max-width: 75vw;
     }
 }
