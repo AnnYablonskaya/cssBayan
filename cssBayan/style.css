@@ -13,7 +13,8 @@
 }
 html {
     scroll-behavior: smooth;
-    background-color: rgb(148, 229, 229);
+    background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
     font-size: 5px;
     color: rgb(70, 46, 122);
     font-family: 'PT Sans Narrow', sans-serif;
@@ -40,9 +41,6 @@ html {
 .item__input {
     display: none;
 }
-.bayan__item:hover .item__btn .item__title {
-    color: rgb(224, 13, 217);
-}
 .item__btn{
     display: flex;
     justify-content: space-between;
@@ -58,12 +56,6 @@ html {
     height: 3rem;
     opacity: 0;
 }
-.item__icon:hover{
-    background: url(./assets/search_view_show_eye_vision_watch_look_icon_232675.svg) center/cover no-repeat;
-    width: 3rem;
-    height: 3rem;
-    opacity: 1;
-}
 .item__img{
     display: flex;
     justify-content: center;
@@ -78,18 +70,18 @@ html {
 .item__input:checked ~ .item__img > .image{
     text-align: center;
     opacity: 1;
-    height: 40%;
-    width: 40%;
+    height: 30%;
+    width: 30%;
     padding: 10px 0;
     transition: all 0.5s ease;
 }
 .item__input:hover ~ .item__img > .image{
     text-align: center;
     opacity: 1;
-    height: 40%;
-    width: 40%;
+    height: 30%;
+    width: 30%;
     padding: 10px 0;
-    transition: all 0.5s ease;
+    transition: 0.8s;
 }
 .item__input:hover ~ .item__btn > .item__icon {
     background: url(./assets/search_view_show_eye_vision_watch_look_icon_232675.svg) center/cover no-repeat;
@@ -101,23 +93,30 @@ html {
     opacity: 1;
     background: url(./assets/search_view_show_eye_vision_watch_look_icon_232675.svg) center/cover no-repeat;
 }
-.bayan__item:hover > .item__btn > .item__title {
-    color: rgb(224, 13, 217);
-}
-.wrapper:hover > .bayan__item > .item__btn > .item__icon {
+.wrapper:hover .item__icon {
     opacity: 1;
+}
+.wrapper:hover .item__title {
+    color: rgb(224, 13, 217);
 }
 @media (min-width: 320px) {
     html {
-        font-size: 7px;
+        font-size: 6px;
     }
     .wrapper {
-        max-width: 80vw;
+        max-width: 85vw;
+    }
+    .item__icon{
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+    .item__title{
+        font-size: 1.8rem;
     }
 }
 @media (min-width: 820px) {
     html {
-        font-size: 10px;
+        font-size: 7px;
     }
     .wrapper {
         max-width: 75vw;
@@ -126,18 +125,9 @@ html {
 
 @media (min-width: 1200px) {
     html {
-        font-size: 12px;
+        font-size: 10px;
     }
     .wrapper {
-        max-width: 70vw;
-    }
-
-    .mem-item:hover > .mem-title-img > .mem-img,
-    .mem-input:checked ~ .mem-title-img > .mem-img {
-        width: 70%;
-        height: 70%;
-    }
-    .wrapper:hover > .bayan__item > .item__btn > .item__icon {
-        opacity: 1;
+        max-width: 65vw;
     }
 }
