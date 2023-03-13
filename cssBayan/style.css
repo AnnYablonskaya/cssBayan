@@ -39,7 +39,7 @@ html {
     background-color: black;
 }
 .item__input {
-    display: none;
+    opacity: 0;
 }
 .item__btn{
     display: flex;
@@ -76,7 +76,7 @@ html {
     padding: 10px 0;
     transition: all 1s ease;
 }
-.item__input:hover ~ .item__img > .image{
+.bayan__item:hover ~ .item__img > .image{
     text-align: center;
     opacity: 1;
     height: 30%;
@@ -84,7 +84,7 @@ html {
     padding: 10px 0;
     transition: 1.5s;
 }
-.item__input:hover ~ .item__btn > .item__icon {
+.bayan__item:hover ~ .item__btn > .item__icon {
     background: url(./assets/search_view_show_eye_vision_watch_look_icon_232675.svg) center/cover no-repeat;
     width: 3rem;
     height: 3rem;
@@ -131,6 +131,21 @@ html {
         font-size: 10px;
     }
     .wrapper {
-        max-width: 75vw;
+        max-width: 85vw;
+    }
+    .item__input:hover ~ .item__img > .image{
+        text-align: center;
+        opacity: 1;
+        height: 30%;
+        width: 30%;
+        padding: 10px 0;
+        transition: 1.5s;
+    }
+    .item__input:hover ~ .item__btn > .item__icon {
+        background: url(./assets/search_view_show_eye_vision_watch_look_icon_232675.svg) center/cover no-repeat;
+        width: 3rem;
+        height: 3rem;
+        opacity: 1;
+        transition: 0.5s;
     }
 }
